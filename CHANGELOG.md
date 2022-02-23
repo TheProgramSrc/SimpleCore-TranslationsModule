@@ -1,3 +1,6 @@
+# v0.1.2 - Snapshots
+* Fixed dependency FilesModule
+
 # v0.1.1 - Snapshot
 * Updated Dependencies
 
