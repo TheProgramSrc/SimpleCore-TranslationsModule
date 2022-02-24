@@ -2,7 +2,6 @@ package xyz.theprogramsrc.translationsmodule
 
 import xyz.theprogramsrc.filesmodule.config.YmlConfig
 import xyz.theprogramsrc.filesmodule.utils.folder
-import xyz.theprogramsrc.translationsmodule.objects.Translation
 import java.io.File
 
 /**
@@ -16,6 +15,7 @@ class TranslationManager {
     companion object {
         private val translationSettings = YmlConfig(File(File("plugins/SimpleCoreAPI").folder(), "TranslationSettings.yml")).add("language", "en")
         lateinit var instance: TranslationManager
+            private set
 
         fun getCurrentLanguage(): String = translationSettings.getStringOrSet("language", "en")
     }
@@ -24,6 +24,20 @@ class TranslationManager {
         instance = this
         loadTranslations()
     }
+
+    /**
+     * Register the given translations to the given group id
+     * @param group The group (folder) of the translation. Defaults to "common"
+     * @param translation The translations to register
+     */
+    fun registerTranslation(group: String = "common", translation: Translation) = this.registerTranslations(group, listOf(translation))
+
+    /**
+     * Register the given translations to the given group id
+     * @param group The group (folder) of the translation. Defaults to "common"
+     * @param translations The translations to register
+     */
+    fun registerTranslations(group: String = "common", vararg translations: Translation) = this.registerTranslations(group, translations.toList())
 
     /**
      * Register the given translations to the given group id
@@ -81,7 +95,7 @@ class TranslationManager {
                 cfg.keys(true).forEach { id ->
                     val t = translationsCache[groupFolder.name]?.find { t1 -> t1.id == id }
                     if(t != null){
-                        langCache[id] = t.translate(groupFolder.name, it.nameWithoutExtension)
+                        langCache[id] = t.translate(it.nameWithoutExtension)
                     }
                 }
                 if(langCache.isNotEmpty()){
