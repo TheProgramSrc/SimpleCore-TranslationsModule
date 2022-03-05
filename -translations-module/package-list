@@ -1,19 +1,21 @@
 $dokka.format:html-v1
 $dokka.linkExtension:html
-$dokka.location:xyz.theprogramsrc.translationsmodule.objects////PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule.objects/index.html
-$dokka.location:xyz.theprogramsrc.translationsmodule.objects/Translation///PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule.objects/-translation/index.html
-$dokka.location:xyz.theprogramsrc.translationsmodule.objects/Translation/Translation/#kotlin.String#kotlin.String#kotlin.String#kotlin.Array[kotlin.String]/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule.objects/-translation/-translation.html
-$dokka.location:xyz.theprogramsrc.translationsmodule.objects/Translation/colors/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule.objects/-translation/colors.html
-$dokka.location:xyz.theprogramsrc.translationsmodule.objects/Translation/defaultValue/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule.objects/-translation/default-value.html
-$dokka.location:xyz.theprogramsrc.translationsmodule.objects/Translation/equals/#kotlin.Any?/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule.objects/-translation/equals.html
-$dokka.location:xyz.theprogramsrc.translationsmodule.objects/Translation/hashCode/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule.objects/-translation/hash-code.html
-$dokka.location:xyz.theprogramsrc.translationsmodule.objects/Translation/id/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule.objects/-translation/id.html
-$dokka.location:xyz.theprogramsrc.translationsmodule.objects/Translation/language/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule.objects/-translation/language.html
-$dokka.location:xyz.theprogramsrc.translationsmodule.objects/Translation/translate/#kotlin.String#kotlin.String?/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule.objects/-translation/translate.html
 $dokka.location:xyz.theprogramsrc.translationsmodule////PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/index.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/Main///PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-main/index.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/Main/Main/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-main/-main.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/Main/onEnable/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-main/on-enable.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation///PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/index.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/Translation/#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String?#kotlin.Array[kotlin.String]#kotlin.Boolean/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/-translation.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/autoRegister/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/auto-register.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/colors/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/colors.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/defaultValue/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/default-value.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/equals/#kotlin.Any?/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/equals.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/group/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/group.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/hashCode/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/hash-code.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/id/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/id.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/language/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/language.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/mainColor/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/main-color.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Translation/translate/#kotlin.String?#kotlin.collections.Map[kotlin.String,kotlin.String]/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/translate.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager.Companion///PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/-companion/index.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager.Companion/getCurrentLanguage/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/-companion/get-current-language.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager.Companion/instance/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/-companion/instance.html
@@ -21,8 +23,9 @@ $dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager///Pointi
 $dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager/TranslationManager/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/-translation-manager.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager/countTranslations/#kotlin.String?#kotlin.String?/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/count-translations.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager/loadTranslations/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/load-translations.html
-$dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager/registerTranslations/#kotlin.String#kotlin.collections.Collection[xyz.theprogramsrc.translationsmodule.objects.Translation]/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/register-translations.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager/registerTranslation/#kotlin.String#xyz.theprogramsrc.translationsmodule.Translation/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/register-translation.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager/registerTranslations/#kotlin.String#kotlin.Array[xyz.theprogramsrc.translationsmodule.Translation]/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/register-translations.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager/registerTranslations/#kotlin.String#kotlin.collections.Collection[xyz.theprogramsrc.translationsmodule.Translation]/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/register-translations.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager/translate/#kotlin.String#kotlin.String?#kotlin.String#kotlin.collections.Map[kotlin.String,kotlin.String]/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation-manager/translate.html
 xyz.theprogramsrc.translationsmodule
-xyz.theprogramsrc.translationsmodule.objects
 
