@@ -1,3 +1,9 @@
+# v0.1.4 - Snapshot
+* Updated SimpleCoreAPI to v0.3.0-SNAPSHOT
+* Now the TranslationManager is initialized at the load stage of the 
+module
+* Added GitHub Repository option for AutoUpdater
+
 # v0.1.3 - Snapshot
 * Moved Translation from objects/
 * Added new register methods to TranslationManager
