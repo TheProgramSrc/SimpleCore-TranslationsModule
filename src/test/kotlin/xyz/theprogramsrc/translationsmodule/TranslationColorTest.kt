@@ -22,7 +22,7 @@ internal class TranslationColorTest {
             defaultValue = "defaultValue",
             mainColor = "&7"
         )
-        assertEquals("&7defaultValue", translation.translate())
+        assertEquals("&7defaultValue", translation.translate(colorize=false))
     }
 
     @Test
@@ -33,7 +33,7 @@ internal class TranslationColorTest {
             colors = arrayOf("&c"),
             mainColor = "&7"
         )
-        assertEquals("&7defaultValue is &ccolorized&7.", translation.translate())
+        assertEquals("&7defaultValue is &ccolorized&7.", translation.translate(colorize=false))
     }
 
     @Test
@@ -44,7 +44,7 @@ internal class TranslationColorTest {
             colors = arrayOf("&c", "&a"),
             mainColor = "&7"
         )
-        assertEquals("&7defaultValue is &ccolorized&7 and &acolorized&7.", translation.translate())
+        assertEquals("&7defaultValue is &ccolorized&7 and &acolorized&7.", translation.translate(colorize=false))
 
     }
 }
