@@ -1,3 +1,6 @@
+# v0.1.5 - Snapshot
+* Now translations are automatically colorized (unless you set `colorize` to `false`)
+
 # v0.1.4 - Snapshot
 * Updated SimpleCoreAPI to v0.3.0-SNAPSHOT
 * Now the TranslationManager is initialized at the load stage of the 

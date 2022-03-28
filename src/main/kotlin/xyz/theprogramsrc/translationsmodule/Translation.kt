@@ -37,7 +37,7 @@ data class Translation(
      *                      You can use '{}' or '%%' as placeholder identifiers like '{test}' or '%test%'. Defaults to empty map.
      * @return The translated string.
      */
-    fun translate(language: String? = null, placeholders: Map<String, String> = emptyMap()): String {
+    fun translate(language: String? = null, placeholders: Map<String, String> = emptyMap(), colorize: Boolean = true): String {
         val file = YmlConfig(File(File("translations/${if(group.endsWith("/")) group else "$group/"}").folder(), (language ?: TranslationManager.getCurrentLanguage()) + ".lang")) // Get the file of the translation
         val mainColor = this.mainColor ?: "" // Get the main color of the translation
         var translation = mainColor.plus(
@@ -59,7 +59,11 @@ data class Translation(
             translation = translation.replace("{$key}", value).replace("%$key%", value) // Replace the placeholder using %% and {}
         }
 
-        return translation // Return the translated string
+        return if(colorize) { // Return the translated string
+            translation.replace("&", "§")
+        } else {
+            translation
+        }
     }
 
     override fun equals(other: Any?): Boolean {
