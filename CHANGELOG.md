@@ -1,5 +1,6 @@
 # v0.1.5 - Snapshot
 * Now translations are automatically colorized (unless you set `colorize` to `false`)
+* Updated tests
 
 # v0.1.4 - Snapshot
 * Updated SimpleCoreAPI to v0.3.0-SNAPSHOT
