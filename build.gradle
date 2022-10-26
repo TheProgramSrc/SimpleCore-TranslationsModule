@@ -34,7 +34,7 @@ dependencies {
     compileOnly 'xyz.theprogramsrc:simplecoreapi:0.3.1-SNAPSHOT'
     compileOnly 'xyz.theprogramsrc:filesmodule:0.1.1-SNAPSHOT'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
 }
 
 shadowJar {
