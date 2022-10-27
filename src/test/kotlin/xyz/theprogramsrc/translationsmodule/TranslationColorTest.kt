@@ -1,8 +1,11 @@
 package xyz.theprogramsrc.translationsmodule
 
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test
+import java.io.File
 
 internal class TranslationColorTest {
 
@@ -13,6 +16,17 @@ internal class TranslationColorTest {
             TranslationManager()
         }
 
+        @AfterAll
+        @JvmStatic
+        fun tearDown() {
+            File("translations").deleteRecursively()
+            File("plugins").deleteRecursively()
+        }
+    }
+
+    @BeforeEach
+    fun beforeEach() {
+        File("translations").deleteRecursively()
     }
 
     @Test
