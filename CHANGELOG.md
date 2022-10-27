@@ -1,3 +1,8 @@
+# v0.1.6 - Snapshot
+* Updated depends
+* Moved to JitCI
+* Improve testing to avoid unwanted files committed
+
 # v0.1.5 - Snapshot
 * Now translations are automatically colorized (unless you set `colorize` to `false`)
 * Updated tests

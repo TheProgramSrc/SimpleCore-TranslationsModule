@@ -77,3 +77,5 @@ bin/
 *.pom.xml
 modules/
 !gradle-wrapper.jar
+plugins/
+translations/
