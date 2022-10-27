@@ -90,7 +90,7 @@ publishing {
         if(System.getenv('env') == 'prod'){
             maven {
                 name = 'GitHubPackages'
-                url = 'https://maven.pkg.github.com/TheProgramSrc/SimpleCore-TasksModule'
+                url = 'https://maven.pkg.github.com/TheProgramSrc/SimpleCore-TranslationsModule'
                 credentials {
                     username = System.getenv('GITHUB_ACTOR')
                     password = System.getenv('GITHUB_TOKEN')
