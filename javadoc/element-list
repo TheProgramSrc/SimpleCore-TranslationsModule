@@ -1,0 +1,5 @@
+$dokka.format:javadoc-v1
+$dokka.linkExtension:html
+$dokka.location:xyz.theprogramsrc.translationsmodule/TranslationManager.Companion///PointingToDeclaration/xyz/theprogramsrc/translationsmodule/TranslationManager.Companion.html
+xyz.theprogramsrc.translationsmodule
+
