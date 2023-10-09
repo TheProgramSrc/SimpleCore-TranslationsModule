@@ -3,7 +3,9 @@ $dokka.linkExtension:html
 $dokka.location:xyz.theprogramsrc.translationsmodule////PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/index.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/Main///PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-main/index.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/Main/Main/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-main/-main.html
-$dokka.location:xyz.theprogramsrc.translationsmodule/Main/onLoad/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-main/on-load.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Main/description/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-main/description.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Main/onDisable/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-main/on-disable.html
+$dokka.location:xyz.theprogramsrc.translationsmodule/Main/onEnable/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-main/on-enable.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/Translation///PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/index.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/Translation/Translation/#kotlin.String#kotlin.String#kotlin.String#kotlin.String#kotlin.String?#kotlin.Array[kotlin.String]#kotlin.Boolean/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/-translation.html
 $dokka.location:xyz.theprogramsrc.translationsmodule/Translation/autoRegister/#/PointingToDeclaration/-translations-module/xyz.theprogramsrc.translationsmodule/-translation/auto-register.html
