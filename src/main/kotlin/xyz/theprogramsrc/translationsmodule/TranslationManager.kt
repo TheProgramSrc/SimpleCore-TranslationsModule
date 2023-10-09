@@ -1,7 +1,7 @@
 package xyz.theprogramsrc.translationsmodule
 
 import xyz.theprogramsrc.filesmodule.config.YmlConfig
-import xyz.theprogramsrc.filesmodule.utils.folder
+import xyz.theprogramsrc.simplecoreapi.global.utils.extensions.folder
 import java.io.File
 
 /**
@@ -47,7 +47,7 @@ class TranslationManager {
     fun registerTranslations(group: String = "common", translations: Collection<Translation>) {
         val translationsCache = this.translationsCache[group] ?: mutableListOf()
         translations.forEach { t ->
-            if(translationsCache.find { it == t } == null) {
+            if (translationsCache.find { it == t } == null) {
                 translationsCache.add(t)
             }
         }
@@ -94,16 +94,16 @@ class TranslationManager {
                 val cfg = YmlConfig(it)
                 cfg.keys(true).forEach { id ->
                     val t = translationsCache[groupFolder.name]?.find { t1 -> t1.id == id }
-                    if(t != null){
+                    if (t != null) {
                         langCache[id] = t.translate(it.nameWithoutExtension)
                     }
                 }
-                if(langCache.isNotEmpty()){
+                if (langCache.isNotEmpty()) {
                     cached[it.nameWithoutExtension] = langCache
                 }
             }
 
-            if(cached.isNotEmpty()) {
+            if (cached.isNotEmpty()) {
                 cache[groupFolder.name] = cached
             }
         }
@@ -115,11 +115,11 @@ class TranslationManager {
      * @param lang The language of the translation. If null it'll count all the languages. Defaults to null
      */
     fun countTranslations(group: String? = null, lang: String? = null): Int {
-        return if(group == null){
+        return if (group == null) {
             cache.values.sumOf {
-                if(lang != null){
+                if (lang != null) {
                     it[lang]?.size ?: 0
-                }else {
+                } else {
                     it.values.sumOf { it2 ->
                         it2.values.size
                     }
@@ -127,9 +127,9 @@ class TranslationManager {
             }
         } else {
             val c = (this.cache[group] ?: return -2)
-            if(lang != null){
+            if (lang != null) {
                 c[lang]?.size ?: 0
-            }else {
+            } else {
                 c.values.sumOf { it2 ->
                     it2.values.size
                 }
