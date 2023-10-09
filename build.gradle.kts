@@ -12,10 +12,10 @@ plugins {
 }
 
 val env = project.rootProject.file(".env").let { file ->
-    if(file.exists()) file.readLines().filter { it.isNotBlank() && !it.startsWith("#") && it.split("=").size == 2 }.associate { it.split("=")[0] to it.split("=")[1] } else emptyMap()
+    if (file.exists()) file.readLines().filter { it.isNotBlank() && !it.startsWith("#") && it.split("=").size == 2 }.associate { it.split("=")[0] to it.split("=")[1] } else emptyMap()
 }.toMutableMap().apply { putAll(System.getenv()) }
 
-val projectVersion = env["VERSION"] ?: "0.3.0-SNAPSHOT"
+val projectVersion = env["VERSION"] ?: "0.4.0-SNAPSHOT"
 
 group = "xyz.theprogramsrc"
 version = projectVersion
@@ -26,18 +26,18 @@ repositories {
     mavenCentral()
 
     maven("https://s01.oss.sonatype.org/content/groups/public/")
+    maven("https://oss.sonatype.org/content/repositories/snapshots/")
+    maven("https://oss.sonatype.org/content/repositories/releases/")
     maven("https://oss.sonatype.org/content/groups/public/")
     maven("https://hub.spigotmc.org/nexus/content/repositories/snapshots/")
+    maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://repo.codemc.org/repository/maven-public/")
     maven("https://jitpack.io/")
 }
 
 dependencies {
-    compileOnly("xyz.theprogramsrc:simplecoreapi:0.6.2-SNAPSHOT")
-    compileOnly("xyz.theprogramsrc:filesmodule:0.2.0-SNAPSHOT")
-
-    compileOnly("org.spigotmc:spigot-api:1.19.3-R0.1-SNAPSHOT")
-    compileOnly("net.md-5:bungeecord-api:1.20-R0.1")
+    compileOnly("xyz.theprogramsrc:simplecoreapi:0.8.0-SNAPSHOT")
+    compileOnly("xyz.theprogramsrc:filesmodule:0.4.0-SNAPSHOT")
 
     testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
 }
@@ -89,9 +89,7 @@ tasks {
     }
 
     dokkaHtml {
-        val dokkaFolder = file(project.buildDir.absolutePath + "/dokka")
-        outputDirectory.set(dokkaFolder)
-
+        outputDirectory.set(layout.buildDirectory.dir("dokka/"))
     }
 }
 

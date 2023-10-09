@@ -1,7 +1,7 @@
 package xyz.theprogramsrc.translationsmodule
 
 import xyz.theprogramsrc.filesmodule.config.YmlConfig
-import xyz.theprogramsrc.filesmodule.utils.folder
+import xyz.theprogramsrc.simplecoreapi.global.utils.extensions.folder
 import java.io.File
 
 /**
@@ -15,20 +15,20 @@ import java.io.File
  * @param autoRegister If the translation should be automatically registered. (Defaults to true) It is recommended to disable if you're going to initialize the same translation multiple times (for example inside a loop)
  */
 data class Translation(
-    val id: String,
-    val defaultValue: String,
-    val group: String = "common",
-    val language: String = "en",
-    val mainColor: String? = null,
-    val colors: Array<String> = emptyArray(),
-    val autoRegister: Boolean = true
+        val id: String,
+        val defaultValue: String,
+        val group: String = "common",
+        val language: String = "en",
+        val mainColor: String? = null,
+        val colors: Array<String> = emptyArray(),
+        val autoRegister: Boolean = true
 ) {
 
-     init {
-         if(autoRegister) {
-             TranslationManager.instance.registerTranslations(group, this)
-         }
-     }
+    init {
+        if (autoRegister) {
+            TranslationManager.instance.registerTranslations(group, this)
+        }
+    }
 
     /**
      * Translates this [Translation] to the current language.
@@ -38,28 +38,30 @@ data class Translation(
      * @return The translated string.
      */
     fun translate(language: String? = null, placeholders: Map<String, String> = emptyMap(), colorize: Boolean = true): String {
-        val file = YmlConfig(File(File("translations/${if(group.endsWith("/")) group else "$group/"}").folder(), (language ?: TranslationManager.getCurrentLanguage()) + ".lang")) // Get the file of the translation
+        val file = YmlConfig(File(File("translations/${if (group.endsWith("/")) group else "$group/"}").folder(), (language
+                ?: TranslationManager.getCurrentLanguage()) + ".lang")) // Get the file of the translation
         val mainColor = this.mainColor ?: "" // Get the main color of the translation
         var translation = mainColor.plus(
-            if(file.has(id)) { // If the translation exists
-                file.getString(id) // Get the translation from the file
-            } else { // If the translation doesn't exist
-                defaultValue // Get the default value
-            }
+                if (file.has(id)) { // If the translation exists
+                    file.getString(id) // Get the translation from the file
+                } else { // If the translation doesn't exist
+                    defaultValue // Get the default value
+                }
         )
-        for(i in colors.indices) { // For each color
+        for (i in colors.indices) { // For each color
             try {
                 val color = colors[i] // Get the color
                 val string = Regex("\\*\\*(.+?)\\*\\*").findAll(translation).first().groupValues[1] // Get the string to replace
                 translation = translation.replaceFirst("**$string**", "$color$string$mainColor") // Replace the first match with the colorized string
-            }catch (_: Exception){} // Ignore errors
+            } catch (_: Exception) {
+            } // Ignore errors
         }
 
         placeholders.forEach { (key, value) -> // For each placeholder
             translation = translation.replace("{$key}", value).replace("%$key%", value) // Replace the placeholder using %% and {}
         }
 
-        return if(colorize) { // Return the translated string
+        return if (colorize) { // Return the translated string
             translation.replace("&", "§")
         } else {
             translation
