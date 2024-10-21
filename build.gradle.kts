@@ -39,7 +39,7 @@ dependencies {
     compileOnly("xyz.theprogramsrc:simplecoreapi:0.8.0-SNAPSHOT")
     compileOnly("xyz.theprogramsrc:filesmodule:0.4.0-SNAPSHOT")
 
-    testImplementation("org.junit.jupiter:junit-jupiter:5.10.0")
+    testImplementation("org.junit.jupiter:junit-jupiter:5.11.3")
 }
 
 
